@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(./images/pic.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.hero .drone{
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(20vh);
+    position: relative;
+    width: 200px;
+    transition: transform 1s;
+}
+.hero .drone #drone-img{
+    width: 100%;
+}
+.hero .drone #drone-left, .hero .drone #drone-right{
+    width: 80px;
+    position: absolute;
+    top: -1px;
+    animation: movement 0.1s infinite;
+}
+@keyframes movement{
+    100%{
+        transform: rotateY(180deg);
+    }
+}
+.hero .drone #drone-left{
+    left:-12px;
+}
+.hero .drone #drone-right{
+    right: -12px;
+}
